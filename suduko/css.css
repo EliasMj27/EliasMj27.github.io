@@ -1,0 +1,92 @@
+body{
+    cursor: default;
+    font-family:sans-serif;
+    color: rgb(204, 204, 204);
+    background-color: rgb(48, 48, 48);
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    
+}
+.bigBox{
+    position: absolute;
+    top:45%;
+    left: 45%;
+    transform: translate(-45%, -45%);
+    align-self: center;
+    height: 350px;
+    width: 350px;
+    border: 1px solid rgb(204, 204, 204);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items:baseline;
+}
+.storBox{
+    border: 1px solid rgb(204, 204, 204);
+    height: 32.9%;
+    width: 32.72%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items:baseline;
+}
+.litenBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(204, 204, 204);
+    height: 31.6%;
+    width: 31.59%;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttons{
+    position: absolute;
+    top:120%;
+    text-align: center;
+    left:120%;
+    transform: translate(-120%, -120%);
+    width: 100%;
+    height: 30%;
+
+}
+.unchangeable{
+    font-weight:bolder;
+}
+.button{
+    color: rgb(204, 204, 204);
+    background-color: rgb(87, 87, 87);
+    border: 0px;
+    border-radius:50%;
+    font-size: 2em;
+    width: 1.5em;
+}
+.GrayText{
+    color: rgb(48, 48, 48);
+}
+.selectedNumber{
+    background-color: rgba(145, 26, 145, 0.493);
+}
+.wrong{
+    background-color: tomato;
+}
+.finished{
+    color:lightgreen;
+}
+.NumbersLeft{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.NumbersLeft div{
+    border: 1px solid black;
+    font-size: 200%;
+}
+
+.validateButton > button{
+    background-color: rgb(87, 87, 87);
+    color: white;
+}

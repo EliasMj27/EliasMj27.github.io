@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        
+        <link rel="stylesheet" href="css.css">
+		<title>sudoku</title>
+	</head>
+	<body>
+        <div class="NumbersLeft">
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+            <div id="9"></div>
+        </div>
+		<div class="bigBox">
+            <div id="storBox1" class="storBox">
+                <div id="litenBox1" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox2" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox3" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox4" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox5" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox6" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox7" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox8" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox9" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox2" class="storBox">
+                <div id="litenBox10" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox11" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox12" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox13" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox14" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox15" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox16" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox17" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox18" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox3" class="storBox">
+                <div id="litenBox19" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox20" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox21" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox22" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox23" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox24" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox25" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox26" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox27" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox4" class="storBox">
+                <div id="litenBox28" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox29" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox30" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox31" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox32" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox33" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox34" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox35" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox36" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox5" class="storBox">
+                <div id="litenBox37" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox38" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox39" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox40" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox41" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox42" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox43" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox44" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox45" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox6" class="storBox">
+                <div id="litenBox46" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox47" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox48" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox49" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox50" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox51" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox52" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox53" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox54" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+                <div id="storBox7" class="storBox">
+                <div id="litenBox55" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox56" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox57" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox58" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox59" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox60" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox61" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox62" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox63" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox8" class="storBox">
+                <div id="litenBox64" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox65" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox66" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox67" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox68" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox69" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox70" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox71" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox72" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+            <div id="storBox9" class="storBox">
+                <div id="litenBox73" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox74" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox75" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox76" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox77" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox78" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox79" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox80" class="litenBox" onclick="clickDiv(this)">
+                </div>
+                <div id="litenBox81" class="litenBox" onclick="clickDiv(this)">
+                </div>
+            </div>
+        </div>
+        <div class="validateButton"><button onclick="validate()">Validate</button></div>
+        <div class="buttons">
+            <button id="b1" onclick="clickButton(this)" class="button">1</button>
+            <button id="b2" onclick="clickButton(this)" class="button">2</button>
+            <button id="b3" onclick="clickButton(this)" class="button">3</button>
+            <button id="b4" onclick="clickButton(this)" class="button">4</button>
+            <button id="b5" onclick="clickButton(this)" class="button">5</button>
+            <button id="b6" onclick="clickButton(this)" class="button">6</button>
+            <button id="b7" onclick="clickButton(this)" class="button">7</button>
+            <button id="b8" onclick="clickButton(this)" class="button">8</button>
+            <button id="b9" onclick="clickButton(this)" class="button">9</button>
+        </div>
+        <script src="js.js"></script>
+	</body>
+</html>
