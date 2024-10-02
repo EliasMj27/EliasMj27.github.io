@@ -93,23 +93,42 @@ function clickDiv(element) {
         if (selectedNumber != null) {
             if(element.innerHTML!=selectedNumber){
                 numbersInSudoku[`${selectedNumber}`]-=1
-                document.getElementById(`${selectedNumber}`).innerHTML = `${selectedNumber} : `+numbersInSudoku[`${selectedNumber}`]
+                //document.getElementById(`${selectedNumber}`).innerHTML = `${selectedNumber} : `+numbersInSudoku[`${selectedNumber}`]
             }
             element.innerHTML = String(selectedNumber)
         } else {
             element.innerHTML = "0"
             element.classList.add("GrayText")
-        if (number != 0) {
-            console.log(number)
-            numbersInSudoku[`${number}`] += 1
-            document.getElementById(`${number}`).innerHTML = `${number} : `+numbersInSudoku[`${number}`]
-
         }
-
-        }
+        CheckForUsedNumbers()
     }
 
 }
+
+function CheckForUsedNumbers()
+{
+    let arr=[0,0,0,0,0,0,0,0,0]
+    for(let i=0;i<9;i++)
+    {
+        for(let j=0;j<9;j++)
+        {
+            if(Number(htmlRutenet[i][j].innerHTML)!=0)
+            {
+                arr[Number(htmlRutenet[i][j].innerHTML)-1]+=1
+            }
+        }
+    }
+    console.log(arr)
+    for(let i=0; i<arr.length;i++)
+    {
+        console.log(`${i+1} : ${htmlRutenet.length - arr[i]}`)
+        
+        document.getElementById(`${i+1}`).innerHTML = `${i+1} : ${htmlRutenet.length - arr[i]}`
+    }
+    console.log(arr)
+}
+
+
 function clickButton(element) {
     for (i of buttons) {
         if (i.element != element) {
@@ -199,7 +218,7 @@ for (let i = 0; i < 9; i++) {
             htmlRutenet[i][j].classList.add("unchangeable")
         }
 
-
+/*
         if (x === "1") {
             numbersInSudoku[0] -= 1
         } else if (x === "2") {
@@ -218,11 +237,9 @@ for (let i = 0; i < 9; i++) {
             numbersInSudoku[7] -= 1
         } else if (x === "9") {
             numbersInSudoku[8] -= 1
-        }
+        }*/
     }
 }
-for (let i = 0; i < 9; i++) {
-    document.getElementById(`${i + 1}`).innerHTML = `${i + 1}: ` + numbersInSudoku[i]
-}
+CheckForUsedNumbers()
 zeroToGray(htmlElement)
 let abc = document.querySelectorAll(".changeable")
