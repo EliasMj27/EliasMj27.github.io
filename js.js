@@ -123,6 +123,7 @@ function clickButton(element) {
         selectedNumber = element.innerHTML
         element.classList.add("selectedNumber")
     }
+    CollorVariables()
 
 }
 function remover(x) {
