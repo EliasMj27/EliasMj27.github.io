@@ -4,6 +4,7 @@ let selectedNumber = null
 let htmlElement = document.querySelectorAll(".litenBox")
 let htmlDict = {}
 let numbersInSudoku = [9,9,9,9,9,9,9,9,9]
+let arrayOfButtons
 
 for (let i = 1; i <= 81; i++) {
     let box = document.getElementById(`litenBox${i}`)
@@ -126,23 +127,46 @@ function CheckForUsedNumbers()
         document.getElementById(`${i+1}`).innerHTML = `${i+1} : ${htmlRutenet.length - arr[i]}`
     }
     console.log(arr)
+    SelectedNumber()
+}
+function SelectedNumber()
+{
+    console.log("sadhgfhashfgd")
+    for(let i=0;i<9;i++)
+        {
+            for(let j=0;j<9;j++)
+            {
+                if(Number(htmlRutenet[i][j].innerHTML)==selectedNumber)
+                {
+                    htmlRutenet[i][j].classList.add("selectedNumber")
+                }
+                else {
+                    htmlRutenet[i][j].classList.remove("selectedNumber")
+                }
+            }
+        } 
 }
 
-
-function clickButton(element) {
-    for (i of buttons) {
-        if (i.element != element) {
-            i.element.classList.remove("selectedNumber")
-        }
+function clickButton(value) {
+    console.log("Button value: ", value);
+    let button = buttons.find(b => b.value === value);
+    console.log("Button found: ", button);
+    
+    if (!button) {
+      return;
     }
-    if (selectedNumber === element.innerHTML) {
-        selectedNumber = null
-        element.classList.remove("selectedNumber")
-    } else {
-        selectedNumber = element.innerHTML
-        element.classList.add("selectedNumber")
-    }
-
+    
+    selectedNumber = (selectedNumber === Number(value)) ? null : Number(value);
+    
+    buttons.forEach(btn => {
+      if (btn.value === value) {
+        btn.element.classList.add("selectedNumber");
+      } else {
+        btn.element.classList.remove("selectedNumber");
+      }
+    });
+    
+    SelectedNumber()
 }
 function remover(x) {
     let z=[]
@@ -240,6 +264,33 @@ for (let i = 0; i < 9; i++) {
         }*/
     }
 }
+
+buttons.forEach(button => {
+    button.element.addEventListener("click", function() {
+      clickButton(button.value);
+    });
+  });
+  
+
+
+document.addEventListener("keydown", function(event)
+{
+    try{
+        let number=Number(event.key)
+        if(number==0){throw new Error("")}
+        clickButton(number)
+    }catch{
+        clickButton(selectedNumber)
+    }
+})
+
+
+
+
+
+
+
+
+
 CheckForUsedNumbers()
 zeroToGray(htmlElement)
-let abc = document.querySelectorAll(".changeable")
