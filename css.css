@@ -10,34 +10,35 @@ body{
 }
 .bigBox{
     position: absolute;
-    top:45%;
-    left: 45%;
-    transform: translate(-45%, -45%);
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-self: center;
     height: 350px;
     width: 350px;
-    border: 1px solid rgb(204, 204, 204);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap :0px;
+
+
     align-items:baseline;
 }
 .storBox{
-    border: 1px solid rgb(204, 204, 204);
-    height: 32.9%;
-    width: 32.72%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    align-items:baseline;
+    border: 2px solid rgb(204, 204, 204);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 .litenBox{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid rgb(204, 204, 204);
-    height: 31.6%;
-    width: 31.59%;
+    height: 100%;
+    width: 100%;
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
 }
