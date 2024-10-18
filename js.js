@@ -119,19 +119,19 @@ function CheckForUsedNumbers()
             }
         }
     }
-    console.log(arr)
+
     for(let i=0; i<arr.length;i++)
     {
-        console.log(`${i+1} : ${htmlRutenet.length - arr[i]}`)
+
         
         document.getElementById(`${i+1}`).innerHTML = `${i+1} : ${htmlRutenet.length - arr[i]}`
     }
-    console.log(arr)
+
     SelectedNumber()
 }
 function SelectedNumber()
 {
-    console.log("sadhgfhashfgd")
+
     for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
@@ -148,9 +148,9 @@ function SelectedNumber()
 }
 
 function clickButton(value) {
-    console.log("Button value: ", value);
-    let button = buttons.find(b => b.value === value);
-    console.log("Button found: ", button);
+
+    let button = buttons.find(b => b.value == value);
+
     
     if (!button) {
       return;
@@ -159,9 +159,10 @@ function clickButton(value) {
     selectedNumber = (selectedNumber === Number(value)) ? null : Number(value);
     
     buttons.forEach(btn => {
-      if (btn.value === value) {
+      if (btn.value == selectedNumber) {
         btn.element.classList.add("selectedNumber");
       } else {
+
         btn.element.classList.remove("selectedNumber");
       }
     });
@@ -241,27 +242,6 @@ for (let i = 0; i < 9; i++) {
         } else {
             htmlRutenet[i][j].classList.add("unchangeable")
         }
-
-/*
-        if (x === "1") {
-            numbersInSudoku[0] -= 1
-        } else if (x === "2") {
-            numbersInSudoku[1] -= 1
-        } else if (x === "3") {
-            numbersInSudoku[2] -= 1
-        } else if (x === "4") {
-            numbersInSudoku[3] -= 1
-        } else if (x === "5") {
-            numbersInSudoku[4] -= 1
-        } else if (x === "6") {
-            numbersInSudoku[5] -= 1
-        } else if (x === "7") {
-            numbersInSudoku[6] -= 1
-        } else if (x === "8") {
-            numbersInSudoku[7] -= 1
-        } else if (x === "9") {
-            numbersInSudoku[8] -= 1
-        }*/
     }
 }
 
@@ -280,7 +260,7 @@ document.addEventListener("keydown", function(event)
         if(number==0){throw new Error("")}
         clickButton(number)
     }catch{
-        clickButton(selectedNumber)
+        clickButton(document.getElementsByClassName("selectedNumber")[0].innerHTML)
     }
 })
 
