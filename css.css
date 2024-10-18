@@ -13,9 +13,16 @@ body{
     position: absolute;
     align-self: center;
     border: 1px solid rgb(204, 204, 204);
+    display: grid;  
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 0px;
 }
 .storBox{
     border: 1px solid rgb(204, 204, 204);
+    display: grid;
+    /*grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);*/
 }
 .litenBox{
     border: 1px solid rgb(204, 204, 204);

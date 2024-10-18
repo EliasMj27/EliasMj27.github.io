@@ -1,0 +1,35 @@
+.TopNav {
+    position: relative;
+    left: -1;
+    right: -1;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    display: flex;
+    flex-direction: row; /* Ensure this is set to row for horizontal alignment */
+    justify-content: center;
+    align-items: center; /* Center align items vertically */
+    background-color: mediumorchid;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.Links
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.BannerButton {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+.BannerButton:hover
+{
+    background-color: orchid;
+}
