@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        
+        <link rel="icon" type="image/x-icon" href="imgs\sudoku.png">
         <link rel="stylesheet" href="css.css">
 		<title>sudoku</title>
 	</head>
@@ -18,7 +18,7 @@
             <div id="8"></div>
             <div id="9"></div>
         </div>
-		<div class="bigBox">
+		<div class="bigBox">    
             <div id="storBox1" class="storBox">
                 <div id="litenBox1" class="litenBox" onclick="clickDiv(this)">
                 </div>
@@ -202,15 +202,15 @@
         </div>
         <div class="validateButton"><button onclick="validate()">Validate</button></div>
         <div class="buttons">
-            <button id="b9" class="button">9</button>
-            <button id="b1" class="button">1</button>
-            <button id="b2" class="button">2</button>
-            <button id="b3" class="button">3</button>
-            <button id="b4" class="button">4</button>
-            <button id="b5" class="button">5</button>
-            <button id="b6" class="button">6</button>
-            <button id="b7" class="button">7</button>
-            <button id="b8" class="button">8</button>
+            <button id="b1" onclick="clickButton(this)" class="button">1</button>
+            <button id="b2" onclick="clickButton(this)" class="button">2</button>
+            <button id="b3" onclick="clickButton(this)" class="button">3</button>
+            <button id="b4" onclick="clickButton(this)" class="button">4</button>
+            <button id="b5" onclick="clickButton(this)" class="button">5</button>
+            <button id="b6" onclick="clickButton(this)" class="button">6</button>
+            <button id="b7" onclick="clickButton(this)" class="button">7</button>
+            <button id="b8" onclick="clickButton(this)" class="button">8</button>
+            <button id="b9" onclick="clickButton(this)" class="button">9</button>
         </div>
         <script src="js.js"></script>
 	</body>
