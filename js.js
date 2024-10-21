@@ -4,6 +4,7 @@ let selectedNumber = null
 let htmlElement = document.querySelectorAll(".litenBox")
 let htmlDict = {}
 let numbersInSudoku = [9,9,9,9,9,9,9,9,9]
+let arrayOfButtons
 
 for (let i = 1; i <= 81; i++) {
     let box = document.getElementById(`litenBox${i}`)
@@ -93,38 +94,79 @@ function clickDiv(element) {
         if (selectedNumber != null) {
             if(element.innerHTML!=selectedNumber){
                 numbersInSudoku[`${selectedNumber}`]-=1
-                document.getElementById(`${selectedNumber}`).innerHTML = `${selectedNumber} : `+numbersInSudoku[`${selectedNumber}`]
+                //document.getElementById(`${selectedNumber}`).innerHTML = `${selectedNumber} : `+numbersInSudoku[`${selectedNumber}`]
             }
             element.innerHTML = String(selectedNumber)
         } else {
             element.innerHTML = "0"
             element.classList.add("GrayText")
-        if (number != 0) {
-            console.log(number)
-            numbersInSudoku[`${number}`] += 1
-            document.getElementById(`${number}`).innerHTML = `${number} : `+numbersInSudoku[`${number}`]
-
         }
-
-        }
+        CheckForUsedNumbers()
     }
 
 }
-function clickButton(element) {
-    for (i of buttons) {
-        if (i.element != element) {
-            i.element.classList.remove("selectedNumber")
+
+function CheckForUsedNumbers()
+{
+    let arr=[0,0,0,0,0,0,0,0,0]
+    for(let i=0;i<9;i++)
+    {
+        for(let j=0;j<9;j++)
+        {
+            if(Number(htmlRutenet[i][j].innerHTML)!=0)
+            {
+                arr[Number(htmlRutenet[i][j].innerHTML)-1]+=1
+            }
         }
     }
-    if (selectedNumber === element.innerHTML) {
-        selectedNumber = null
-        element.classList.remove("selectedNumber")
-    } else {
-        selectedNumber = element.innerHTML
-        element.classList.add("selectedNumber")
+    console.log(arr)
+    for(let i=0; i<arr.length;i++)
+    {
+        console.log(`${i+1} : ${htmlRutenet.length - arr[i]}`)
+        
+        document.getElementById(`${i+1}`).innerHTML = `${i+1} : ${htmlRutenet.length - arr[i]}`
     }
-    CollorVariables()
+    console.log(arr)
+    SelectedNumber()
+}
+function SelectedNumber()
+{
+    console.log("sadhgfhashfgd")
+    for(let i=0;i<9;i++)
+        {
+            for(let j=0;j<9;j++)
+            {
+                if(Number(htmlRutenet[i][j].innerHTML)==selectedNumber)
+                {
+                    htmlRutenet[i][j].classList.add("selectedNumber")
+                }
+                else {
+                    htmlRutenet[i][j].classList.remove("selectedNumber")
+                }
+            }
+        } 
+}
 
+function clickButton(value) {
+    console.log("Button value: ", value);
+    let button = buttons.find(b => b.value === value);
+    console.log("Button found: ", button);
+    
+    if (!button) {
+      return;
+    }
+    
+    selectedNumber = (selectedNumber === Number(value)) ? null : Number(value);
+    
+    buttons.forEach(btn => {
+      if (btn.value === value) {
+        btn.element.classList.add("selectedNumber");
+      } else {
+        btn.element.classList.remove("selectedNumber");
+      }
+    });
+    
+    SelectedNumber()
 }
 function remover(x) {
     let z=[]
@@ -199,31 +241,35 @@ for (let i = 0; i < 9; i++) {
         } else {
             htmlRutenet[i][j].classList.add("unchangeable")
         }
-
-
-        if (x === "1") {
-            numbersInSudoku[0] -= 1
-        } else if (x === "2") {
-            numbersInSudoku[1] -= 1
-        } else if (x === "3") {
-            numbersInSudoku[2] -= 1
-        } else if (x === "4") {
-            numbersInSudoku[3] -= 1
-        } else if (x === "5") {
-            numbersInSudoku[4] -= 1
-        } else if (x === "6") {
-            numbersInSudoku[5] -= 1
-        } else if (x === "7") {
-            numbersInSudoku[6] -= 1
-        } else if (x === "8") {
-            numbersInSudoku[7] -= 1
-        } else if (x === "9") {
-            numbersInSudoku[8] -= 1
-        }
     }
 }
-for (let i = 0; i < 9; i++) {
-    document.getElementById(`${i + 1}`).innerHTML = `${i + 1}: ` + numbersInSudoku[i]
-}
+
+buttons.forEach(button => {
+    button.element.addEventListener("click", function() {
+      clickButton(button.value);
+    });
+  });
+  
+
+
+document.addEventListener("keydown", function(event)
+{
+    try{
+        let number=Number(event.key)
+        if(number==0){throw new Error("")}
+        clickButton(number)
+    }catch{
+        clickButton(selectedNumber)
+    }
+})
+
+
+
+
+
+
+
+
+
+CheckForUsedNumbers()
 zeroToGray(htmlElement)
-let abc = document.querySelectorAll(".changeable")
