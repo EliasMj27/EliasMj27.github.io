@@ -3,29 +3,42 @@ body{
     font-family:sans-serif;
     color: rgb(204, 204, 204);
     background-color: rgb(48, 48, 48);
-    height: 0;
-    padding-bottom: 20%;
+    height: 100%;
     width: 100%;
     align-content: center;
     
 }
 .bigBox{
     position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-self: center;
-    border: 1px solid rgb(204, 204, 204);
-    display: grid;  
-    grid-template-rows: repeat(3, 1fr);
+    height: 350px;
+    width: 350px;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0px 0px;
+    grid-template-rows: repeat(3, 1fr);
+    gap :0px;
+
+
+    align-items:baseline;
 }
 .storBox{
-    border: 1px solid rgb(204, 204, 204);
+    border: 2px solid rgb(204, 204, 204);
+    height: 100%;
+    width: 100%;
     display: grid;
-    /*grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 .litenBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgb(204, 204, 204);
+    height: 100%;
+    width: 100%;
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -48,6 +61,7 @@ body{
     border: 0px;
     border-radius:50%;
     font-size: 2em;
+    height: 1.5em;
     width: 1.5em;
 }
 .GrayText{
