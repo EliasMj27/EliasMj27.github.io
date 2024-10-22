@@ -126,7 +126,7 @@ function CheckForUsedNumbers()
         
         document.getElementById(`${i+1}`).innerHTML = `${i+1} : ${htmlRutenet.length - arr[i]}`
     }
-    CollorVariables()
+    zeroToGray()
 
     SelectedNumber()
 }
