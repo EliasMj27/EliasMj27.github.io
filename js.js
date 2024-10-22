@@ -77,10 +77,13 @@ function isCorect() {
 
 }
 
-function zeroToGray(x) {
-    for (let i = 0; i < x.length; i++) {
-        if (x[i].innerHTML === "0") {
-            x[i].classList.add("GrayText")
+function zeroToGray() {
+    for (let i = 0; i < htmlRutenet.length; i++) {
+        for(let j = 0; j < htmlRutenet[i].length;j++)
+        {
+            if (htmlRutenet[i][j].innerHTML === "0") {
+                htmlRutenet[i][j].classList.add("GrayText")
+            }
         }
     }
 }
