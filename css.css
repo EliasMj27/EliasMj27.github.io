@@ -4,43 +4,30 @@ body{
     color: rgb(204, 204, 204);
     background-color: rgb(48, 48, 48);
     height: 100%;
+    padding-bottom: 20%;
     width: 100%;
     align-content: center;
     
 }
 .bigBox{
     position: absolute;
-    top:50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    align-self: center;
-    height: 350px;
-    width: 350px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    right: 50%;
+    transform: translate(-50,-50);
+    border: 1px solid rgb(204, 204, 204);
+    display: grid;  
     grid-template-rows: repeat(3, 1fr);
-    gap :0px;
-
-
-    align-items:baseline;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 0px;
 }
 .storBox{
-    border: 2px solid rgb(204, 204, 204);
-    height: 100%;
-    width: 100%;
+    border: 1px solid rgb(204, 204, 204);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 .litenBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid rgb(204, 204, 204);
-
-    height: 100%;
-    width: 100%;
-
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -51,7 +38,7 @@ body{
     left:120%;
     transform: translate(-120%, -120%);
     width: 100%;
-    height: 30%;
+    height: auto;
 
 }
 .unchangeable{
@@ -63,7 +50,6 @@ body{
     border: 0px;
     border-radius:50%;
     font-size: 2em;
-    height: 1.5em;
     width: 1.5em;
 }
 .GrayText{
@@ -94,4 +80,3 @@ body{
     background-color: rgb(87, 87, 87);
     color: white;
 }
-

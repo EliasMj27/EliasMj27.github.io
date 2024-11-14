@@ -87,7 +87,8 @@ function zeroToGray() {
         }
     }
 }
-function clickDiv(element) {
+function clickDiv(element) {    
+    console.log("click")
     element.classList.remove("wrong")
     if (element.classList.contains("changeable")) {
         let number = element.innerHTML
