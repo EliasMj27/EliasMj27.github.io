@@ -1,0 +1,11 @@
+
+{
+    "keyBinds":[
+        {
+        "Right" : "d",
+        "Left" : "a",
+        "Down" : "s",
+        "Up" : "W"
+        }
+    ]
+}
