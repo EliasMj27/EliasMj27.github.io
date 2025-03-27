@@ -1,0 +1,26 @@
+{
+    "generalWords" : [
+        { "norwegian": "Latin-Amerika", "spanish": ["América Latina", "Latinoamérica"] },
+        { "norwegian": "Folk (og landsbyer)", "spanish": ["Pueblos"] },
+        { "norwegian": "Dekke", "spanish": ["Cubrir"] },
+        { "norwegian": "Spansktalende", "spanish": ["Hispanohablante"] },
+        { "norwegian": "Menneskelige ressurser", "spanish": ["Recursos humanos"] },
+        { "norwegian": "Mestiser", "spanish": ["Mestizos"] },
+        { "norwegian": "Naturressurser", "spanish": ["Recursos naturales"] },
+        { "norwegian": "Urfolk", "spanish": ["Indígenas"] },
+        { "norwegian": "Etterkommere", "spanish": ["Descendientes"] },
+        { "norwegian": "Tilby", "spanish": ["Ofrecer"] },
+        { "norwegian": "Stort mangfold", "spanish": ["Gran variedad"] },
+        { "norwegian": "Bebodd", "spanish": ["Poblado"] },
+        { "norwegian": "Fortid", "spanish": ["Pasado"] },
+        { "norwegian": "Mayaene", "spanish": ["Los mayas"] },
+        { "norwegian": "Kolonitiden", "spanish": ["Época colonial"] },
+        { "norwegian": "Kunnskap", "spanish": ["Conocimiento"] },
+        { "norwegian": "Røtter", "spanish": ["Raíces"] },
+        { "norwegian": "Blomstre", "spanish": ["Florecer"] },
+        { "norwegian": "Basert på", "spanish": ["Se basa en"] },
+        { "norwegian": "Strand (karibisk strand)", "spanish": ["Playa", "Playa caribeña"] },
+        { "norwegian": "Like mye som", "spanish": ["Tanto como"] },
+        { "norwegian": "Like (adjektiv) som", "spanish": ["Tan (adjektiv) como.."] }
+    ]
+}
