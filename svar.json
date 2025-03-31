@@ -1,5 +1,6 @@
 {
     "generalWords" : [
+        { "norwegian": "test", "spanish":["test"]},
         { "norwegian": "Latin-Amerika", "spanish": ["América Latina", "Latinoamérica"] },
         { "norwegian": "Folk (og landsbyer)", "spanish": ["Pueblos"] },
         { "norwegian": "Dekke", "spanish": ["Cubrir"] },
