@@ -45,7 +45,7 @@
         { "question": "hvilken cellekomponent produserer proteiner?", "answer": ["ribosom"] },
         { "question": "hva kalles typen rna som bærer genetiske instruksjoner fra dna?", "answer": ["mrna"] },
         { "question": "hva kalles typen rna som frakter aminosyrer til ribosomet?", "answer": ["trna"] },
-        { "question": "hva kalles en sekvens av tre nukleotider i mrna?", "answer": ["kodon"] },
+        { "question": "hva kalles en sekvens av tre nukleotider i mrna?", "answer": ["kodon", "triplet"] },
         { "question": "hva kalles et par homologe kromosomer?", "answer": ["kromosompar"] },
         { "question": "hva kalles en liten endring i en enkelt dna-nukleotid?", "answer": ["punktmutasjon"] },
         { "question": "hva refererer til antall kromosomer i en organisme?", "answer": ["kromosomtall"] },
