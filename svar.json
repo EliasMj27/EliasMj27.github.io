@@ -3,7 +3,7 @@
     [
         "generalWorlds",
         "biologyTerms"
-    ]
+    ],
         
     "generalWords": [
         { "question": "test", "answer": ["test"] },
