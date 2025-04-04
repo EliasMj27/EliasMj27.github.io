@@ -1,10 +1,8 @@
 {
-    "ListOfCat":
-    [
-        "generalWorlds",
+    "ListOfCat": [
+        "generalWords",
         "biologyTerms"
     ],
-        
     "generalWords": [
         { "question": "test", "answer": ["test"] },
         { "question": "latin-amerika", "answer": ["américa latina", "latinoamérica"] },
@@ -66,12 +64,10 @@
         { "question": "hva kalles rollen en organisme har i sitt miljø?", "answer": ["nisje"] },
         { "question": "hva kalles det naturlige miljøet der en organisme lever?", "answer": ["habitat"] },
         { "question": "hva kalles en gruppe individer av samme art i et område?", "answer": ["populasjon"] },
-        { "question": "U", "answer": ["uracil"]},
-        { "question": "A", "answer": ["adenin"]},
-        { "question": "T", "answer": ["tymin"]},
-        { "question": "G", "answer": ["guanin"]},
-        { "question": "C", "answer": ["cytosin"]}
+        { "question": "U", "answer": ["uracil"] },
+        { "question": "A", "answer": ["adenin"] },
+        { "question": "T", "answer": ["tymin"] },
+        { "question": "G", "answer": ["guanin"] },
+        { "question": "C", "answer": ["cytosin"] }
     ]
-
-
 }
