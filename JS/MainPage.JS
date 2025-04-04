@@ -1,3 +1,6 @@
+let data;
+
+
 function hamburgerMenuClick()
 {
     if(document.getElementById("LeftNav").style.visibility!= "visible")
@@ -7,7 +10,35 @@ function hamburgerMenuClick()
     else{
         document.getElementById("LeftNav").style.visibility="collapse";
     }
-    document.getElementById("bar1").classList.toggle("change")
-    document.getElementById("bar2").classList.toggle("change")
-    document.getElementById("bar3").classList.toggle("change")
 }
+
+async function GetJson() {
+    const request = new Request("https://eliasmj27.github.io/JSON/Pages.json");
+
+    const responce = await fetch(request);
+    const svar = await responce.json();
+    data = svar;
+}
+
+
+async function CreateLinks()
+{
+    let ListOfPages=[];
+    let ListOfLinks=[];
+    for(i in data.pages)
+    {
+        ListOfPages.push( document.createElement("div"));
+        document.getElementById("Links").appendChild(ListOfPages[ListOfPages.length-1]);
+        ListOfPages[ListOfPages.length-1].classList.add("BannerButton");
+        ListOfLinks.push(document.createElement("a"));
+        ListOfPages[ListOfPages.length-1].appendChild(ListOfLinks[ListOfLinks.length-1]);
+        ListOfLinks[ListOfLinks.length-1].href=i["url"];
+        ListOfLinks[ListOfLinks.length-1].innerHTML=i["name"];
+    }
+}
+async function startup()
+{
+    await GetJson()
+    CreateLinks()
+}
+startup()
