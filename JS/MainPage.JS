@@ -27,7 +27,6 @@ async function CreateLinks()
     let ListOfLinks=[];
     for(let i=0; i < data.pages.length;i++)
     {
-        console.log(data.pages[i])
         ListOfPages.push( document.createElement("div"));
         document.getElementById("Links").appendChild(ListOfPages[ListOfPages.length-1]);
         ListOfPages[ListOfPages.length-1].classList.add("BannerButton");
@@ -40,7 +39,6 @@ async function CreateLinks()
 async function startup()
 {
     await GetJson()
-    console.log(data)
     await CreateLinks()
 }
 startup()
