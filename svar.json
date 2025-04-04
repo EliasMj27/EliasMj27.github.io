@@ -3,7 +3,7 @@
     [
         "generalWorlds",
         "biologyTerms"
-    ],
+    ]
         
     "generalWords": [
         { "question": "test", "answer": ["test"] },
@@ -29,7 +29,7 @@
         { "question": "strand (karibisk strand)", "answer": ["playa", "playa caribeña"] },
         { "question": "like mye som", "answer": ["tanto como"] },
         { "question": "like (adjektiv) som", "answer": ["tan (adjektiv) como.."] }
-    ],
+    ]
     "biologyTerms": [
         { "question": "hva er den første cellen som dannes etter befruktning?", "answer": ["zygote"] },
         { "question": "hva bærer genetisk informasjon i cellekjernen?", "answer": ["kromosom"] },
