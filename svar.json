@@ -1,4 +1,10 @@
 {
+    "ListOfCat":
+    [
+        "generalWorlds",
+        "biologyTerms"
+    ]
+        
     "generalWords": [
         { "question": "test", "answer": ["test"] },
         { "question": "latin-amerika", "answer": ["américa latina", "latinoamérica"] },
